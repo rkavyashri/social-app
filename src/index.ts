@@ -8,8 +8,8 @@ const start = async () => {
         "allowedOrigin": [
           "*"
         ],
-        "routeName": "login-route",
-        "pathName": "int-auth-ms/v1",
+        "routeName": "authentication-route",
+        "pathName": "v1",
         "version": "1.0",
         "apiName": "login"
       }

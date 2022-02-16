@@ -1,0 +1,12 @@
+{
+    "postgresConn": {
+        "type": "postgresdb",
+        "description": "",
+        "host": "172.19.40.76",
+        "port": "5432",
+        "username": "devuser",
+        "password": "h@Rd30rk",
+        "dbname": "",
+        "schemaname": ""
+    }
+}
