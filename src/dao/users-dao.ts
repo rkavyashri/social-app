@@ -7,18 +7,21 @@ export class UserDao {
 
     public async getUserDetailsByUserName ( username ) {
         try {
-            const pgdata = postgres.getPGPInstance( getDBConnConfig );
-            let filepath = '../sql/user/user-authentication';
+
+            let connDetails = getDBConnConfig();
+            const pgConn = postgres.getPGPInstance( connDetails );
+            let filepath = '../sqls/user/user-authentication.sql';
             let loadquery: any = await load( filepath )
-            let data = await pgdata.dbInstance.any( loadquery, [ username ] )
+            let data = await pgConn.dbInstance.any( loadquery, [ username ] )
             console.log( data )
-            if ( data ) {
-                return data;
+            if ( data && data.length > 0 ) {
+                return data[ 0 ];
             }
             else {
                 throw ( 'Invalid Username' )
             }
         } catch ( err ) {
+            console.log( err )
             throw ( err )
 
         }
