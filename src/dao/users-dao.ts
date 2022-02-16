@@ -11,7 +11,7 @@ export class UserDao {
             let filepath = '../sql/user/user-authentication';
             let loadquery: any = await load( filepath )
             let data = await pgdata.dbInstance.any( loadquery, [ username ] )
-
+            console.log( data )
             if ( data ) {
                 return data;
             }
