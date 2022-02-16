@@ -1,0 +1,54 @@
+{
+  "name": "social-app",
+  "version": "1.0.0",
+  "description": "A social application where the user can share posts",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc-watch": "tsc -w",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "type-setup": "typings install",
+    "start": "node build/index.js",
+    "run": "npm run tc-build & npm run tc-start",
+    "launch": "npm run build & npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Social",
+    "Post",
+    "Comment",
+    "Node"
+  ],
+  "author": "Kavyashri Raju",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "gulp-mocha": "^7.0.2",
+    "hapi": "^16.1.1",
+    "hapi-swagger": "^7.7.1",
+    "inert": "^4.1.0",
+    "jsonfile": "^5.0.0",
+    "nconf": "^0.8.4",
+    "pg": "^7.9.0",
+    "pg-promise": "^8.6.4",
+    "uuid": "^3.3.3",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/hapi": "^16.1.15",
+    "@types/nconf": "0.0.34",
+    "@types/node": "^8.10.35",
+    "gulp": "^3.9.1",
+    "gulp-env": "^0.4.0",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-shell": "^0.6.3",
+    "gulp-tslint": "^8.1.2",
+    "gulp-typescript": "^3.2.1",
+    "nyc": "^11.7.1",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "typescript": "^2.4.2"
+  },
+  "license": "ISC"
+}
