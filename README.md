@@ -7,7 +7,10 @@ A Social Application which has following functionalities
 - Other user can comment on any post
 
 ## Requirements
-The project requires [Node v10](https://nodejs.org/).
+The project requires 
+[Node v10](https://nodejs.org/).
+Postgres v12.4
+
 ## Users
 
 - User signup. Once signup is success, (s)he will get a welcome email on
