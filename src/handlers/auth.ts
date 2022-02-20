@@ -8,8 +8,9 @@ export class AuthenticationHanlder {
             const username = request.payload.username;
             console.log( 'username ', username )
             const password = request.payload.password;
-            this.authenticateUser( username, password );
-            reply( true ).code( 200 )
+            let authResult = await this.authenticateUser( username, password );
+            if ( authResult )
+                reply( { authenticated: true } ).code( 200 )
         } catch ( err ) {
             reply( err ).code( 500 )
         }
